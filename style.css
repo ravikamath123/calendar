@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #2f2e2e;
+}
+
+h1 {
+    margin-top: 30px;
+    color: #f2f2f2;
+}
+
+#calendar {
+    margin: 20px auto;
+    max-width: 400px;
+    border-collapse: collapse;
+}
+
+#month{
+    font-weight: 900;
+    text-align: center;
+    vertical-align: middle;
+}
+
+th {
+    padding: 10px;
+    background-color: purple;
+    color: #fff;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    background-color: #478f9f;
+    color: white;
+}
+
+td:hover {
+    background-color: #f2f2f2;
+    cursor: pointer;
+    color: black;
+}
+
+td[style*="background-color: purple;"] {
+    border-radius: 50%;
+    border: none;
+}
+
+td:not([style*="background-color: purple;"]):empty {
+    background-color: #e6e6e6;
+}
+
