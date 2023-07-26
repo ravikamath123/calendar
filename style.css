@@ -49,3 +49,21 @@ td:not([style*="background-color: purple;"]):empty {
     background-color: #e6e6e6;
 }
 
+#prevBtn, #nextBtn{
+    padding: 10px 15px;
+    font-weight: 700;
+    font-size: 20px;
+    background-color: #ee00ff;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#prevBtn:hover,#nextBtn:hover{
+    background-color: #eda3f2;
+    color: #2f2e2e;
+    cursor: pointer;
+}
+

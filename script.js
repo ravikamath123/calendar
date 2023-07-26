@@ -1,7 +1,8 @@
-function renderCalendar() {
+let displayedMonth = new Date().getMonth();
+let displayedYear = new Date().getFullYear();
+
+function renderCalendar(year , month) {
     const today = new Date();
-    const year = today.getFullYear();
-    const month = today.getMonth();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     const firstDayOfWeek = new Date(year, month, 1).getDay();
 
@@ -37,6 +38,13 @@ function renderCalendar() {
 
     calendarHTML += '</table>';
     calendarDiv.innerHTML = calendarHTML;
+
+    if (month === 11){
+        if (year === displayedYear){
+            displayedYear++;                 // Move to next Year
+            displayedMonth = 0;             // Reset to January
+        }
+    }
 }
 
 function monthName(month) {
@@ -44,4 +52,25 @@ function monthName(month) {
     return months[month];
 }
 
-renderCalendar();
+renderCalendar(displayedYear, displayedMonth);
+
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+
+prevBtn.addEventListener("click",() => {
+    displayedMonth--;
+    if(displayedMonth < 0){
+        displayedMonth = 11;
+        displayedYear--;
+    }
+    renderCalendar(displayedYear, displayedMonth);
+});
+
+nextBtn.addEventListener("click",() => {
+    displayedMonth++;
+    if(displayedMonth > 11){
+        displayedMonth = 0;
+        displayedYear++;
+    }
+    renderCalendar(displayedYear, displayedMonth);
+});
