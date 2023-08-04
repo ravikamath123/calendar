@@ -32,12 +32,14 @@ td {
     text-align: center;
     background-color: #478f9f;
     color: white;
+    /* transition: .25s transform cubic-bezier(.155,1.105,.295,1.12) */
 }
 
 td:hover {
     background-color: #f2f2f2;
     cursor: pointer;
     color: black;
+    /* transform: scale(1.15); */
 }
 
 td[style*="background-color: purple;"] {
@@ -59,9 +61,11 @@ td:not([style*="background-color: purple;"]):empty {
     border-radius: 50px;
     margin: 10px;
     cursor: pointer;
+    transition: .25s transform cubic-bezier(.155,1.105,.295,1.12)
 }
 
 #prevBtn:hover,#nextBtn:hover{
+    transform: scale(1.2);
     background-color: #eda3f2;
     color: #2f2e2e;
     cursor: pointer;
