@@ -65,9 +65,17 @@ td:not([style*="background-color: purple;"]):empty {
 }
 
 #prevBtn:hover,#nextBtn:hover{
-    transform: scale(1.2);
+    transform: scale(1.15);
     background-color: #eda3f2;
     color: #2f2e2e;
     cursor: pointer;
 }
+
+#prevBtn:active,#nextBtn:active{
+    transform: scale(0.8);
+    background-color: #eda3f2;
+    color: #2f2e2e;
+    cursor: pointer;
+}
+
 
